@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule, DatePipe } from '@angular/common';
-import { PokemonTypeColorPipe } from '../pipes/pokemon-type-color.pipe';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
-import { FormPokemonComponent } from "./form-pokemon.component";
 import { PokemonsService } from '../pokemons.service';
 
 @Component({
@@ -11,9 +10,7 @@ import { PokemonsService } from '../pokemons.service';
   templateUrl: './edit-pokemon.component.html',
   imports: [
     CommonModule,
-    DatePipe,
-    PokemonTypeColorPipe,
-    FormPokemonComponent
+    FormsModule
 ]
 })
 export class EditPokemonComponent implements OnInit{

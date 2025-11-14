@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Pokemon } from '../donnees-pokemons/pokemon';
 import { CommonModule, DatePipe } from '@angular/common';
 import { PokemonTypeColorPipe } from '../pipes/pokemon-type-color.pipe';
+import { RarityStarsPipe } from '../pipes/rarity-stars.pipe';
 import { Router, ActivatedRoute } from '@angular/router';
 import { PokemonsService } from '../pokemons.service';
 
@@ -12,7 +13,8 @@ import { PokemonsService } from '../pokemons.service';
   imports: [
     CommonModule,
     DatePipe,
-    PokemonTypeColorPipe
+    PokemonTypeColorPipe,
+    RarityStarsPipe
   ]
 })
 export class DetailPokemonComponent implements OnInit{

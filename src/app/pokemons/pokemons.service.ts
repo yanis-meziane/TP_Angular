@@ -1,7 +1,6 @@
 import { Injectable } from "@angular/core";
 import { Pokemon } from "./donnees-pokemons/pokemon";
-//import { POKEMONS } from "./donnees-pokemons/mock-pokemons";
-import { POKEMONS } from './mock-pokemons';
+import { POKEMONS } from "./donnees-pokemons/mock-pokemons";
 import { HttpClient, HttpHeaders } from "@angular/common/http"
 import { catchError, Observable, of, tap } from "rxjs";
 
@@ -54,7 +53,7 @@ export class PokemonsService{
   //Permet de mettre à jour le pokemon
   updatePokemon(pokemon: Pokemon): Observable<null> {
   // 1. Trouver l'index dans le tableau statique
-  const index = POKEMONS.findIndex(p => p.id === pokemon.id);
+  const index = POKEMONS.findIndex((p: Pokemon) => p.id === pokemon.id);
 
   if (index !== -1) {
     // 2. Remplacer l'ancien objet par le nouveau (mise à jour)

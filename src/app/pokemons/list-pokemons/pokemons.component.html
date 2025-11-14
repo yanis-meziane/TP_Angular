@@ -9,8 +9,8 @@
     <div *ngFor="let pokemon of pokemons" class="col s6 m4" >
       
       <div class="card horizontal" pkmnBorderCard (click)="selectPokemon(pokemon)">
-        <div class="card-image">
-          <img [src]="pokemon.picture">
+        <div class="card-image" style="width: 150px; height: 150px; overflow: hidden;">
+          <img [src]="pokemon.picture" style="width: 100%; height: 100%; object-fit: cover;">
         </div>
         
         <div class="card-stacked">
