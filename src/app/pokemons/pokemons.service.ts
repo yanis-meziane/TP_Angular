@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { Pokemon } from "./donnees-pokemons/pokemon";
 //import { POKEMONS } from "./donnees-pokemons/mock-pokemons";
-import { POKEMONS } from '..mock-pokemons';
+import { POKEMONS } from './mock-pokemons';
 import { HttpClient, HttpHeaders } from "@angular/common/http"
 import { catchError, Observable, of, tap } from "rxjs";
 
