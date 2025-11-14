@@ -1,0 +1,12 @@
+
+<div class="form-group">
+  <label for="rarity">Rareté</label>
+  <select id="rarity" [(ngModel)]="pokemon.rarity" name="rarity" required>
+    <option *ngFor="let r of [1, 2, 3, 4, 5]" [value]="r">{{ r }} étoiles</option>
+  </select>
+</div>
+
+<div class="form-group">
+  <label for="picture">Image (URL)</label>
+  <input type="url" class="form-control" id="picture" [(ngModel)]="pokemon.picture" name="picture" required>
+</div>
